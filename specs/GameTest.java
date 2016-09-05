@@ -84,4 +84,13 @@ public class GameTest {
     assertEquals(2, player2.handCount());
   }
 
+  @Test
+  public void canInitRound(){
+    game.initDeck();
+    game.initPlayers(player1, player2);
+    game.dealOut();
+    assertEquals(2, player1.handCount());
+    assertEquals(2, player2.handCount());
+  }
+
 }

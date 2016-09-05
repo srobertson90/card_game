@@ -66,8 +66,16 @@ public class Game {
     }
   }
 
-  public void playRound(){
+  public void initDeck(){
+    clearDeck();
+    fullDeck();
+    shuffleDeck();
+  }
 
+  public void initPlayers(Player player1, Player player2){
+    clearPlayers();
+    addToPlayers(player1);
+    addToPlayers(player2);
   }
 
 }
