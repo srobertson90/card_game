@@ -41,6 +41,10 @@ public class Game {
     deck.clear();
   }
 
+  public void clearPlayers(){
+    players.clear();
+  }
+
   public Card removeFromDeck(){
     if (deck.get(0) != null) {
       Card card = deck.remove(0);
@@ -61,5 +65,9 @@ public class Game {
       }
     }
   }
-  
+
+  public void playRound(){
+
+  }
+
 }
