@@ -50,11 +50,6 @@ public class Game {
     player.handAdd(card);
   }
 
-  public void returnToDeck(Player player, Card card){
-    player.handRemove(card);
-    addToDeck(card);
-  }
-
   public void moveCardBetweenPlayers(Player player1, Player player2, Card card){
     player1.handRemove(card);
     player2.handAdd(card);

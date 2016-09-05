@@ -67,14 +67,6 @@ public class GameTest {
   }
 
   @Test
-  public void canTakeCardFromPlayer(){
-    player1.handAdd(card1);
-    game.returnToDeck(player1, card1);
-    assertEquals(0, player1.handCount());
-    assertEquals(1, game.deckSize());
-  }
-
-  @Test
   public void canMoveCardBetweenPLayers(){
     player1.handAdd(card1);
     game.moveCardBetweenPlayers(player1, player2, card1);
