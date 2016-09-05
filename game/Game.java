@@ -33,14 +33,6 @@ public class Game {
     }
   }
 
-  public void dealOut(int times){
-    for(int i=0; i<times; i++){
-      for (Player player : players){
-        dealCard(player);
-      }
-    }
-  }
-
   public void shuffleDeck() {
     Collections.shuffle(this.deck); 
   }
@@ -62,9 +54,12 @@ public class Game {
     player.handAdd(card);
   }
 
-  public void moveCardBetweenPlayers(Player player1, Player player2, Card card){
-    player1.handRemove(card);
-    player2.handAdd(card);
+  public void dealOut(){
+    for(int i=0; i<2; i++){
+      for (Player player : players){
+        dealCard(player);
+      }
+    }
   }
-
+  
 }
