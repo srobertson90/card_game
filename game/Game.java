@@ -21,10 +21,22 @@ public class Game {
     deck.add(card);
   }
 
+  public void addToPlayers(Player player){
+    players.add(player);
+  }
+
   public void fullDeck(){
     for(SuitType suit : SuitType.values()){
       for(RankType rank : RankType.values()){
         deck.add(new Card(suit, rank));
+      }
+    }
+  }
+
+  public void dealOut(int times){
+    for(int i=0; i<times; i++){
+      for (Player player : players){
+        dealCard(player);
       }
     }
   }
